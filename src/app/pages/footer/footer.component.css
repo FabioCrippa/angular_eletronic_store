@@ -1,0 +1,44 @@
+.footer {
+    background-color: lightskyblue;
+    color: white;
+    font-size: 18px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.footer__title {
+    font-size: 22px;
+    font-weight: bold;
+    color: blue;
+    margin-top: 5px;
+
+}
+
+.footer__about-text {
+    width: 400px;
+    text-align: justify;
+}
+
+.footer i {
+    color: orange;
+    margin-right: 5px;
+}
+
+.footer li {
+    margin: 10px 0;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: 20px;
+    background-color: beige;
+    color: gray;
+    font-weight: bold;
+    padding: 20px;
+}
+
