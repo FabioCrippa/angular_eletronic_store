@@ -5,6 +5,12 @@
     padding: 10px;
 }
 
+.shipping-prices a {
+    text-decoration: none;
+    color: var(--blue);
+    margin: 10px;
+}
+
 .cart-container {
     padding: 10px;
 }
@@ -22,7 +28,7 @@ li {
 
 img {
     width: 100px;
-    height: 100px;
+    height: 90px;
     display: block;
 }
 
@@ -58,11 +64,33 @@ input {
     color: white;
     padding: 10px;
     font-size: 22px;
-    margin-top: 10px;
+    margin: 10px;
     transition: .3s all;
 }
 
 .buy-button:hover {
     filter: brightness(0.9);
     cursor: pointer;
+}
+
+.label-nome {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.label-endereco {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#name {
+    width: 200px;
+    height: 20px;
+}
+
+#address {
+    width: 200px;
+    height: 20px;
 }

@@ -10,11 +10,12 @@
             <p class="product-item__price">
                 {{ product.price | currency: "BRL" }}
             </p>
-            <p class="product-item__description" *ngIf="product.description">
-                {{ product.description }}
-            </p>
+            <div class="product-item__description" *ngIf="product.description">
+                <p>{{ product.description }}</p>
+            </div>
+            <button class="product-item__buy-button" type="button">Comprar</button>
         </a>
-        <button class="product-item__buy-button" type="button">Comprar</button>
+        
         <button class="product-item__share-button" type="button" (click)="share()">Compartilhar</button>
     </div>
 </section>
