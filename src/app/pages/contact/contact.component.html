@@ -1,0 +1,112 @@
+<h2 class="contact-title">Entre em contato</h2>
+
+<section class="contact-container">
+    <form class="contact-form" [formGroup]="formContact">
+
+        <input 
+            type="nome"
+            placeholder="Digite o seu nome"
+            formControlName="nome"
+            [class.valid]="formContact.controls['nome'].valid"
+            [class.invalid]="formContact.controls['nome'].invalid &&
+            (formContact.controls['nome'].touched || formContact.controls['nome'].dirty)">
+
+            <div *ngIf="formContact.controls['nome'].invalid && 
+                (formContact.controls['nome'].touched || formContact.controls['nome'].dirty)">
+
+                <small class="error-message" *ngIf="formContact.controls['nome'].hasError('minlength')">
+                    Esse campo precisa de no mínimo 4 caracteres.
+                </small>
+                
+                <small class="error-message" *ngIf="formContact.controls['nome'].hasError('required')">
+                    Esse campo é obrigatório.
+                </small>
+            </div>
+
+        <input 
+            type="assunto"
+            placeholder="Digite o seu assunto"
+            formControlName="assunto"
+            [class.valid]="formContact.controls['assunto'].valid"
+            [class.invalid]="formContact.controls['assunto'].invalid &&
+            (formContact.controls['assunto'].touched || formContact.controls['assunto'].dirty)">
+
+            <div *ngIf="formContact.controls['assunto'].invalid && 
+                (formContact.controls['assunto'].touched || formContact.controls['assunto'].dirty)">
+
+                <small class="error-message" *ngIf="formContact.controls['assunto'].hasError('minlength')">
+                    Esse campo precisa de no mínimo 10 caracteres.
+                </small>
+                
+                <small class="error-message" *ngIf="formContact.controls['assunto'].hasError('required')">
+                    Esse campo é obrigatório.
+                </small>
+            </div>
+
+        <input type="tel" 
+            placeholder="(00) 0 0000-0000" 
+            mask="(00) 0 0000-0000" 
+            formControlName="telefone"
+            [class.valid]="formContact.controls['telefone'].valid" 
+            [class.invalid]="formContact.controls['telefone'].invalid &&
+            (formContact.controls['telefone'].touched || formContact.controls['telefone'].dirty)" />
+
+        <div *ngIf="formContact.controls['telefone'].invalid &&
+                        (formContact.controls['telefone'].touched || formContact.controls['telefone'].dirty)">
+            <small class="error-message" *ngIf="formContact.controls['telefone'].hasError('minlength')">
+                Esse campo precisa de no mínimo 11 caracteres.
+            </small>
+
+            <small class="error-message" *ngIf="formContact.controls['telefone'].hasError('required')">
+                Esse campo é obrigatório.
+            </small>
+        </div>
+
+        <input type="email" 
+            placeholder="Digite o seu e-mail" 
+            formControlName="email"
+            [class.valid]="formContact.controls['email'].valid" 
+            [class.invalid]="formContact.controls['email'].invalid &&
+            (formContact.controls['email'].touched || formContact.controls['email'].dirty)">
+
+        <div *ngIf="formContact.controls['email'].invalid &&
+                    (formContact.controls['email'].touched || formContact.controls['email'].dirty)">
+            <small class="error-message" *ngIf="formContact.controls['email'].hasError('email')">
+                Esse campo precisa ser um e-mail válido.
+            </small>
+
+            <small class="error-message" *ngIf="formContact.controls['email'].hasError('required')">
+                Esse campo é obrigatório.
+            </small>
+        </div>
+
+        <textarea maxlength="300" 
+            placeholder="Digite a sua mensagem" 
+            rows="4" 
+            formControlName="mensagem"
+            [class.valid]="formContact.controls['mensagem'].valid" 
+            [class.invalid]="formContact.controls['mensagem'].invalid &&
+            (formContact.controls['mensagem'].touched || formContact.controls['mensagem'].dirty)">
+
+        </textarea>
+        <div *ngIf="formContact.controls['mensagem'].invalid &&
+                        (formContact.controls['mensagem'].touched || formContact.controls['mensagem'].dirty)">
+            <small class="error-message" *ngIf="formContact.controls['mensagem'].hasError('minlength')">
+                Esse campo precisa de no mínimo 20 caracteres.
+            </small>
+
+            <small class="error-message" *ngIf="formContact.controls['mensagem'].hasError('required')">
+                Esse campo é obrigatório.
+            </small>
+        </div>
+
+        <button [disabled]="formContact.invalid" type="submit" (click)="sendForm()">Enviar</button>
+    </form>
+    <address>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7554457.697020917!2d-51.64651676668619!3d-22.40266247796699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf033b659d1fc5%3A0x984626451d4b656f!2sDecolar.com!5e0!3m2!1spt-PT!2sbr!4v1661598883337!5m2!1spt-PT!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Alameda Grajaú, 219 - Alphaville Industrial, Barueri - SP, 06454-050</p>
+    </address>
+</section>

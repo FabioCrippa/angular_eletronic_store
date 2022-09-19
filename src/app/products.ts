@@ -21,4 +21,6 @@ export const products = [
     {id: 12, name: "Samsung Galaxy A13", price: 899, description: "A large phone. Very fast.", imagem: "./assets/Samsung Galaxy A13.jpg" },
     {id: 13, name: "iPhone 12 Apple", price: 899, description: "A large phone with one of the best screens.", imagem: "./assets/iPhone 12 Apple.jpg" },
     {id: 14, name: "iPhone 12 Apple", price: 899, description: "A large phone with one of the best screens.", imagem: "./assets/iPhone 12 Apple.jpg" },
+    {id: 15, name: "iPhone 12 Apple", price: 899, description: "A large phone with one of the best screens.", imagem: "./assets/iPhone 12 Apple.jpg" },
+    {id: 16, name: "iPhone 12 Apple", price: 759, description: "A large phone with one of the best screens.", imagem: "./assets/iPhone 12 Apple.jpg" },
 ]

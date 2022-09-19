@@ -12,6 +12,8 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CartComponent } from './pages/cart/cart.component';
 import { RouterModule } from '@angular/router';
 import { ShippingComponent } from './pages/shipping/shipping.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    ContactComponent,
     
   ],
   imports: [
@@ -29,7 +32,8 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
