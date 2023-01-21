@@ -1,3 +1,3 @@
 # EletronicStore
 
-![angular blog](../eletronic-store/src/assets/Angular-EletronisStore.png)
+![eletronic store](../eletronic-store/src/assets/Angular-EletronisStore.png)
